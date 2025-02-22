@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulação de Bebê</title>
+    <link rel="stylesheet" href="style.css">
+<style>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #333;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.baby-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #4CAF50;
+}
+
+button {
+    background-color: #007BFF; /* Cor azul */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+}
+
+.logs {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#log {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}</style>
+<body>
+    <div class="game-container">
+        <div class="baby-container">
+            <h2>Bebê</h2>
+            <div id="fralda1">Fralda: ⬜</div>
+            <div id="reacao1">Reação: Normal</div>
+            <button onclick="urinar(bebe1)">Bebê Faz Xixi</button>
+            <button onclick="defecar(bebe1)">Bebê Faz Cocô</button>
+            <button onclick="trocarFralda(bebe1)">Trocar a Fralda</button>
+        </div>
+
+        <div class="logs">
+            <h3>Logs</h3>
+            <div id="log"></div>
+        </div>
+    </div>
+
+    <script src="family.js"></script>
+</body>
+  </html>
